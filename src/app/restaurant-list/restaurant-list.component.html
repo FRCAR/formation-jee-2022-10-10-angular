@@ -1,0 +1,13 @@
+<h2>Restaurant : </h2>
+<ul class="restaurants">
+  <li *ngFor="let restaurant of restaurants">
+    <button [class.selected]="restaurant === selectedRestaurant"
+       type="button" (click)="onSelect(restaurant)">
+      <span class="id">{{restaurant.id}}</span>
+      <span class="name">{{restaurant.name}}</span>
+    </button>
+    <a routerLink="/restaurant-booking/{{restaurant.id}}">Créer une réservation</a>
+  </li>
+</ul>
+Vous avez sélectionné le restaurant avec le nom : {{selectedRestaurant?.name}}
+<br/>Le champ de recherche du parent vaut {{restaurantSearch?.name}}

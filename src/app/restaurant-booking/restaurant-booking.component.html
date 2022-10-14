@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <label for="id"> Id: </label>
+    <input id="id" [(ngModel)]="booking.id" readonly="readonly">
+  </div>
+  <div>
+    <label for="name">Nom: </label>
+    <input id="name" [(ngModel)]="booking.name" placeholder="name">
+  </div>
+  <div>
+    <label for="date">Date: </label>
+    <input id="date" [(ngModel)]="booking.date" placeholder="date" type="date">
+  </div>
+  <div>
+    <label for="size"> Nombre de convives: </label>
+    <input id="size" [(ngModel)]="booking.size" placeholder="1" type="number">
+  </div>
+  <div>
+    <button type="button" (click)="save()">Sauvegarder</button>
+  </div>

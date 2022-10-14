@@ -1,0 +1,6 @@
+<div>
+  <label for="name">Recherche avec le nom : </label>
+  <input id="name" [(ngModel)]="restaurantSearch.name" placeholder="name">
+  Le champ de recherche vaut : {{restaurantSearch.name}}
+</div>
+<restaurant-list [restaurantSearch]="restaurantSearch" ></restaurant-list>
